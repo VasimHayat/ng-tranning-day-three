@@ -1,0 +1,32 @@
+<tr class="border-start-0 border-end-0 border-top-0 border-1 border-info">
+    <th class="px-0 py-3">
+        <div class="symbol symbol-65px me-5">
+            <span class="symbol-label bg-light-primary"> 
+                <span class="svg-icon svg-icon-1 svg-icon-primary">
+                    <img [src]="article.image" class="rounded-circle" [ngStyle]="{'height':'50px','width':'50px'}" alt="...">
+                </span> 
+            </span>
+        </div>
+    </th>
+    <td class="ps-0">
+        <a href="#" class="text-gray-800 fw-bolder text-hover-primary fs-6">{{article.owner.firstName}}</a>
+        <span class="text-muted  d-block mt-1">{{article.text}}</span>
+    </td>
+    <td>
+        <div class="d-flex flex-column w-100 me-3">
+            <div class="d-flex flex-stack mb-2">
+                <span class="text-dark me-2 fs-6 fw-bolder ">[{{article.tags}}]</span>
+            </div>
+            <div class="d-flex align-items-center">                                                                
+                <span class="text-muted fs-7 ps-3"> {{article.publishDate | date:'short'}}</span>
+            </div>
+        </div>
+    </td>
+    <td class="text-end pe-0">
+        <a class="btn btn-icon btn-bg-light btn-active-primary btn-sm"> 
+            <span class="svg-icon svg-icon-4">
+                 <i class="fa fa-trash-o text-danger fa-2x"></i>
+            </span> 
+        </a>
+    </td>
+</tr>

@@ -1,0 +1,10 @@
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <span class="input-group-text" id="basic-addon1">Sort By </span>
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" name="orderBy"  autocomplete="off" value="name" 
+    [(ngModel)]="orderByKey" (ngModelChange)="sortDataAction()">
+    <label class="btn btn-outline-primary" for="btnradio1">Name</label>
+  
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" name="orderBy" autocomplete="off" value="text"
+    [(ngModel)]="orderByKey" (ngModelChange)="sortDataAction()">
+    <label class="btn btn-outline-primary" for="btnradio2">Article Text</label> 
+  </div>
