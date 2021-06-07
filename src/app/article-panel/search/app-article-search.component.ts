@@ -11,6 +11,7 @@ export class AppArticleSearchComponent implements AfterViewInit{
 
    // @ViewChild('searchBoxRef') searchBoxRef :ElementRef;
   //  @ViewChildren(NgModel) models :QueryList<NgModel>;
+  // @ViewChildren('searchBoxRef1,searchBoxRef2') searchBoxRefs :QueryList<ElementRef>;
  
     ngAfterViewInit(): void {
         // console.log(this.models.changes.subscribe(resp =>{
