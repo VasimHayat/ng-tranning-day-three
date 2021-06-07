@@ -33,7 +33,8 @@ export class AppArticlePanelComponent{
          
     }
 
-    sortDataAction( orderByKey:string){       
+    sortDataAction( orderByKey:string){   
+        console.log(orderByKey)    
        this.uiArticleArray.sort(orderByKey =="name" ?this.sortByName:this.sortByArticleText);
     }
 

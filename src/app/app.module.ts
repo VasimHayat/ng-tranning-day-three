@@ -25,7 +25,6 @@ import { AppArticleSearchComponent } from './article-panel/search/app-article-se
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
