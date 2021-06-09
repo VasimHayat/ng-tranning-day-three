@@ -9,6 +9,9 @@ import { AppHeaderComponent } from './header/app-header.component';
 import { AppArticleComponent } from './article-panel/article/app-article.component'; 
 import { ArticleSortItemComponent } from './article-panel/sort-article/article-sort-item.component';
 import { AppArticleSearchComponent } from './article-panel/search/app-article-search.component';
+import { AppRootService } from './services/app.root.service';
+import { AppSignupComponent } from './signup/app-signup.component';
+import { AppLandingComponent } from './landing/app-landing.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +20,16 @@ import { AppArticleSearchComponent } from './article-panel/search/app-article-se
   AppArticlePanelComponent,
   AppArticleComponent,
   AppArticleSearchComponent,
-  ArticleSortItemComponent
+  ArticleSortItemComponent,
+  AppSignupComponent,
+  AppLandingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers:[AppRootService],
   bootstrap: [AppComponent] 
 })
 export class AppModule { }

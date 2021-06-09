@@ -2,10 +2,12 @@ import { AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildre
 import { NgModel } from "@angular/forms";
 import { ArticleData } from "../api/article.data";
 import { Article } from "../model/article.model";
+import { AppRootService } from "../services/app.root.service";
 
 @Component({
     selector:'article-panel', 
-    templateUrl:'app-article-panel.component.html'
+    templateUrl:'app-article-panel.component.html',
+    providers:[]
 })
 export class AppArticlePanelComponent{
   
@@ -14,8 +16,8 @@ export class AppArticlePanelComponent{
     private articleArray:Array<Article>  = [];
     uiArticleArray:Array<Article>  = [];
 
-    constructor(){
-        this.articleArray = ArticleData.data;
+    constructor(private appRootSevice: AppRootService){
+        this.articleArray =  this.appRootSevice.getArticles();
         this.uiArticleArray = [...this.articleArray];
     }
 

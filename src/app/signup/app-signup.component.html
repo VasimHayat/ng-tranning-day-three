@@ -1,0 +1,134 @@
+<div class="container pt-5">
+
+
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-8  px-lg-4">
+          <div class="card">
+    
+            <div class="d-flex align-items-center p-3 bg-dark text-white bg-purple rounded shadow-sm">
+                <img class="me-3" src="https://hubworks.com/assets/images/store-apps/hubworks-logo-55x51.png" alt="" width="48" height="38">
+                <div class="lh-1">
+                  <h1 class="h6 mb-0 text-white lh-1">Signup</h1> 
+                </div>
+              </div>
+    
+            <div class="card-body p-lg-5"> 
+    
+              <form #form="ngForm" (ngSubmit)="processSignup(form)" >
+                 <div class="row p-2">
+                    <div class="col">
+                        <label class="mb-2 mt-1">First Name</label>
+                        <input type="text" #fNameField="ngModel"  class="form-control" required minlength="4"  name="firstName" [(ngModel)]="userDetail.firstName" placeholder="First Name" > 
+    
+                        <div class="alert alert-danger" [hidden]="!form.submitted || fNameField.valid || fNameField.untouched">
+                             {{fNameField.errors?.pattern|json}}
+                             {{fNameField.errors?.minlength|json}}
+                        </div>  
+
+                    </div>
+                    <div class="col">
+                        <label class="mb-2 mt-1">Last Name</label>
+                      <input type="text" #lNameField="ngModel" class="form-control" name="lastName" required [(ngModel)]="userDetail.lastName"  placeholder="Last Name">
+
+                      <div class="alert alert-danger" [hidden]="lNameField.valid || lNameField.untouched">
+                        {{fNameField.errors?.pattern|json}}
+                        {{fNameField.errors?.minlength|json}}
+                        {{fNameField.errors|json}}
+                   </div>  
+                    </div>
+                  </div> 
+    
+                  <div class="row p-2">
+                    <div class="col">
+                        <label class="mb-2 mt-1">EmailID</label>
+                      <input type="email" class="form-control" name="emailID" [(ngModel)]="userDetail.emailID"  placeholder="EmailID">
+                    </div>
+                     
+                  
+
+                    <div class="col">
+                        <label class="mb-2 mt-1">Country</label>
+                        <select class="form-control" name="country" [(ngModel)]="userDetail.country">
+                            <option value="INDIA">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                        </select>
+                   </div>
+    
+                  </div> 
+    
+                  <div class="row p-2">
+                    <div class="col">
+                        <label class="mb-2 mt-1">Password</label>
+                        <input type="password" class="form-control" name="password"  [(ngModel)]="userDetail.password"  placeholder="Password"> 
+                    </div>
+                    <div class="col">
+                        <label class="mb-2 mt-1">Confirm Password</label>
+                      <input type="password" class="form-control"  name="confirm_password" [(ngModel)]="userDetail.confirm_password"   placeholder="Password">
+                    </div>
+                  </div> 
+    
+                  <div class="row p-2">
+                    <div class="col">
+                        <label class="mb-2 mt-1">Address</label>
+                        <textarea class="form-control" rows="3"  name="address"  [(ngModel)]="userDetail.address"></textarea>
+                   </div>
+    
+                
+
+                  <div class="col">
+                    <label class="mb-2 mt-1">Subscription Type</label>
+                    <div class="form-row align-items-center">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subscriptionType" [(ngModel)]="userDetail.subscriptionType" id="Subscription"   value="Monthly" checked>
+                            <label class="form-check-label" for="Subscription">
+                              Monthly
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subscriptionType"  [(ngModel)]="userDetail.subscriptionType" id="Subscription1" value="Yearly">
+                            <label class="form-check-label" for="Subscription1">
+                              Yearly
+                            </label>
+                          </div>
+                    </div>
+                   
+                  </div>
+                  </div> 
+    
+                  <div class="row p-2">
+                     <div class="col">
+                        <input class="form-check-input" type="checkbox" name="isAgree" [(ngModel)]="userDetail.isAgree" id="aggree" value="">
+                        <label class="form-check-label" for="aggree">
+                          I aggree to the term & conditions.
+                        </label>
+                     </div>
+                  </div>
+    
+                <div class="form-group">
+                  <button class="btn btn-primary" id="regidter" type="submit" name="registerSubmit">Register</button>
+                </div>
+     
+              </form>
+            </div>
+    
+            <div class="card-footer px-lg-5 py-lg-4">
+              <div class="text-sm ">Already have an account? <a class="text-blue">Login</a>.</div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+
+
+
+
+    ng-untouched ---> untouched
+    ng-touched --->  touched
+
+    ng-pristine --- value changed pristine
+    ng-dirty --- changd  dirty
+
+    ng-valid - 
+    ng-invalid - 

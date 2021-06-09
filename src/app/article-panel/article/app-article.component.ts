@@ -8,3 +8,4 @@ import { Article } from "src/app/model/article.model";
 export class AppArticleComponent{
     @Input() article:Article;
 }
+ 
